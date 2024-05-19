@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GalactApps - Desenvolvimento de Aplicativos Móveis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header id="header">
+        <nav>
+            <div class="logo-container">
+                <img src="logo2.jpeg" alt="Logo da GalactApps" class="logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#apps">Aplicativos</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()" aria-label="Alternar navegação" role="button">
+                <div class="hamburger"></div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1>Bem-vindo à Galact Apps</h1>
+            <p>Criando o futuro dos aplicativos móveis, expandindo horizontes a cada dia.</p>
+            <button onclick="scrollToSection('about')">Saiba Mais</button>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <h2>Sobre Nós</h2>
+        <div class="about-content">
+            <p>Na GalactApps, especializamo-nos em criar aplicativos móveis inovadores e amigáveis que fazem a diferença. Nossa equipe está dedicada a expandir os limites da tecnologia para fornecer as melhores soluções para nossos usuarios.</p>
+        </div>
+    </section>
+
+    <section id="apps" class="apps-section">
+        <h2>Nossos Aplicativos</h2>
+        <div class="carousel-container">
+            <button class="carousel-button prev" onclick="prevSlide()">&#10094;</button>
+            <div class="carousel-slide">
+                <div class="app-card">
+                    <img src="app1.png" alt="Logo do App 1" class="app-logo">
+                    <div class="app-description">
+                        <h3>Minutos de Sabedoria</h3>
+                        <p>Neste aplicativo estão reunidos pequenos pensamentos de sabedoria, que nos transmitem luz, paz, amor e serenidade. É uma obra de filosofia motivacional e inspiradora, escrita para pessoas que buscam elevar-se moral, intelectual e espiritualmente.</p>
+                        <a href="https://play.google.com/store/apps/details?id=com.appgalact.minutosdesabedoria&pcampaignid=web_share" target="_blank">
+                            <img src="google-play.png" alt="Ícone do Google Play" class="google-play-icon">
+                        </a>
+                    </div>
+                </div>
+                <div class="app-card">
+                    <img src="app2.png" alt="Logo do App 2" class="app-logo">
+                    <div class="app-description">
+                        <h3>Galeria de Prompts (Chat IA)</h3>
+                        <p>Explore um aplicativo de Prompts para Conversas que oferece uma ampla variedade de sugestões para criar diálogos. Este aplicativo foi projetado para inspirar conversas criativas e informativas com a assistência da inteligência artificial de Texto Generativa.</p>
+                        <a href="https://play.google.com/store/apps/details?id=com.galactapp.promptschatgpt&pcampaignid=web_share" target="_blank">
+                            <img src="google-play.png" alt="Ícone do Google Play" class="google-play-icon">
+                        </a>
+                    </div>
+                </div>
+                <div class="app-card">
+                    <img src="app3.webp" alt="Logo do App 3" class="app-logo">
+                    <div class="app-description">
+                        <h3>Simulador Loto Fácil</h3>
+                        <p>O Simulador de Loteria é um aplicativo educativo e divertido que permite que você:<br>
+                            Simule jogos da Loto Fácil.<br>
+                            Analise probabilidades de cada jogo.<br>
+                            Crie e personalize seus próprios jogos de loteria (Loto Fácil).<br>
+                            Consulte resultados novos e anteriores.</p>
+                        <a href="https://play.google.com/store/apps/details?id=com.galactapp.simuladorlotofacil&pcampaignid=web_share" target="_blank">
+                            <img src="google-play.png" alt="Ícone do Google Play" class="google-play-icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-button next" onclick="nextSlide()">&#10095;</button>
+        </div>
+        <div class="carousel-dots">
+            <span class="dot" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+            <span the dot" onclick="goToSlide(2)"></span>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Contate-Nos</h2>
+        <p>Tem perguntas ou deseja entrar em contato? Alcance-nos em <a class="specific-link" href="mailto:galact4app@gmail.com">galact4app@gmail.com</a>.</p>
+        <a href="https://play.google.com/store/apps/dev?id=6442447482809120290" target="_blank" class="google-play-button">Visite nossa Loja no Google Play</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 GalactApps. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

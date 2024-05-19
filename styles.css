@@ -1,0 +1,422 @@
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #111;
+    color: #fff;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0, 0, 0);
+    padding: 10px 30px; /* Padding original */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    
+}
+
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 60px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    transition: all 0.3s ease; /* Suavizar a transição */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin-right: 70px; /* Ajuste a margem conforme necessário - mover mais para o centro da tela */
+    padding: 0;
+}
+
+.nav-links.active {
+    background-color: rgba(0, 0, 0, 0.9); /* Torna o fundo dos links mais opaco quando ativo */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.nav-links li {
+    display: inline;
+    padding: 12px 20px; /* Adiciona mais espaço em torno dos links para uma melhor tocabilidade */
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #e43f5a;
+}
+
+.menu-toggle {
+    display: none; /* Escondido por padrão, exibido em telas pequenas */
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    position: fixed; /* Garante que ele fique visível independentemente do scrolling */
+    top: 20px; /* Ajuste conforme necessário */
+    right: 20px; /* Posiciona no canto superior direito */
+    z-index: 999; /* Garante que esteja sobre outros elementos */
+}
+
+
+.menu-toggle .hamburger {
+    width: 30px;
+    height: 3px;
+    background-color: #fff; /* Certifique-se que a cor contrasta com o fundo */
+    margin: 2px 0; /* Espaçamento entre as barras */
+    transition: all 0.3s ease; /* Suaviza a transição da animação */
+}
+
+
+/* Mudar a visibilidade dos links e do menu hambúrguer em telas menores */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        position: fixed; /* Mude de absolute para fixed para ficar relativo à viewport */
+        top: 60px; /* Ajuste conforme a altura do seu header */
+        left: 0; /* Asegure que comece do lado esquerdo da tela */
+        right: 0; /* Estende até o lado direito da tela */
+        flex-direction: column;
+        width: 100%; /* Use 100% da largura da tela */
+        background-color: #000; /* Escolha uma cor de fundo */
+        text-align: center; /* Centralize os links */
+        z-index: 1000; /* Aumente o z-index se necessário para garantir visibilidade */
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .nav-links.active {
+        display: flex; /* Assegure que esteja usando flex para mostrar os links verticalmente */
+    }
+
+    .nav-links li {
+        display: block; /* Mude de inline para block para cada link ocupar sua própria linha */
+        width: 100%; /* Faça cada link usar a largura total disponível */
+    }
+
+    .nav-links li a {
+        display: block; /* Garante que o link preencha todo o espaço horizontal do li */
+        padding: 12px; /* Adicione padding adequado para melhor tocabilidade */
+    }
+}
+
+
+
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('background-image.png') no-repeat center center/cover;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+}
+
+.hero-section .hero-content {
+    max-width: 600px;
+}
+
+.hero-section h1 {
+    font-size: 4em;
+    margin: 0 0 20px;
+    text-transform: uppercase;
+}
+
+.hero-section p {
+    font-size: 1.5em;
+    margin: 0 0 20px;
+}
+
+.hero-section button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #e43f5a;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-section button:hover {
+    background-color: #c7324a;
+}
+
+.about-section {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #222;
+    color: #fff;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: 60px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.about-section h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #e43f5a;
+}
+
+.about-content p {
+    font-size: 1.5em;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.apps-section, .contact-section {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #111;
+    color: #fff;
+}
+
+
+
+
+
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.app-card {
+    min-width: 100%;
+    min-height: 400px; /* Valor inicial, ajuste conforme necessário */
+    box-sizing: border-box;
+    background-color: #222;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .app-card {
+        flex-direction: column; /* Muda a direção do flex para coluna */
+        align-items: center;
+        text-align: right; /* Centraliza o texto */
+        min-height:650px;
+        
+    }
+
+    .app-logo, .app-description {
+        width: 100%; /* Faz a imagem e a descrição ocuparem a largura total */
+       
+    }
+
+    .app-logo {
+        margin-bottom: 20px; /* Adiciona espaço entre a imagem e a descrição */
+    }
+}
+
+
+
+
+
+.app-logo {
+    height: 300px;
+    width: 300px; /* Ajuste a largura conforme necessário */
+    margin-right: 20px;
+}
+
+.app-description {
+    flex: 1;
+    text-align: left;
+}
+
+.app-description h3 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.app-description p {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.google-play-icon {
+    height: 40px;
+    margin-top: 10px;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+    color: #fff;
+    font-size: 2em;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.carousel-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.carousel-dots .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.carousel-dots .dot.active {
+    background-color: #717171;
+}
+
+.contact-section .google-play-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #e43f5a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.contact-section .google-play-button:hover {
+    background-color: #5a91d8;
+}
+
+.specific-link {
+    color: #e43f5a;
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-weight: bold; /* Torna o texto em negrito */
+}
+
+footer {
+    background-color: #000;
+    text-align: center;
+    padding: 10px 0;
+    color: #e4e4e4;
+    border-top: 1px solid #444;
+}
+
+
+
+.menu-toggle.toggle .hamburger {
+    transform: rotate(45deg);
+    background-color: #e43f5a; /* Mude a cor para ficar mais visível quando ativo */
+}
+
+.menu-toggle.toggle .hamburger::before,
+.menu-toggle.toggle .hamburger::after {
+    background-color: #e43f5a;
+}
+
+.menu-toggle .hamburger::before,
+.menu-toggle .hamburger::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+
+
+.menu-toggle .hamburger::before {
+    transform: translateY(-10px);
+}
+
+.menu-toggle .hamburger::after {
+    transform: translateY(10px);
+}
+
+.menu-toggle.toggle .hamburger::before {
+    transform: rotate(-90deg);
+    top: 0;
+}
+
+.menu-toggle.toggle .hamburger::after {
+    transform: rotate(90deg);
+    top: 0;
+}
+
+
+
+header.scrolled {
+    padding: 10px 15px; /* Reduzir o padding dos links */
+    font-size: 0.9em; /* Opcional: reduzir o tamanho da fonte */
+    height: 35px;
+    transition: height 0.2s ease; /* Suavizar a transição de tamanho */
+    background-color: rgba(0, 0, 0, 0.8); /* Opcional: mudar a transparência ou cor */
+}
+
+ header.scrolled .menu-toggle {
+    height: auto; /* Ajuste a altura ou remova restrições de altura */
+    padding: 5px 0; /* Reduza o padding para diminuir a altura total */
+    transition: all 0.3s ease;
+}
+
+
+header.scrolled .logo-container {
+    height: 30px; /* Reduzir o tamanho do logo */
+    transition: height 0.3s ease; /* Suavizar a transição de tamanho */
+
+}
+
+
+header.scrolled .logo {
+    height: 40px; /* Reduzir o tamanho do logo */
+    transition: height 0.2s ease; /* Suavizar a transição de tamanho */
+}
