@@ -3,101 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GalactApps - Desenvolvimento de Aplicativos Móveis</title>
+    <title>GalactApps - Desenvolvimento de Aplicativos Móveis Inovadores</title>
+    <meta name="description" content="A GalactApps é especializada no desenvolvimento de aplicativos móveis inovadores que oferecem soluções tecnológicas avançadas.">
+    <meta name="keywords" content="desenvolvimento de aplicativos móveis, apps android, soluções móveis, GalactApps, tecnologia, inovação">
     <link rel="stylesheet" href="styles.css">
+    <!-- AOS Library CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+      <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-92SMPB4QEP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-92SMPB4QEP');
+    </script>
+    <!-- Fim da tag do Google -->
+
+
 </head>
 <body>
-  <header id="header">
+    <!-- Header -->
+    <header id="header">
         <nav>
             <div class="logo-container">
                 <img src="logo2.jpeg" alt="Logo da GalactApps" class="logo">
             </div>
             <ul class="nav-links">
-                <li><a href="#home">Início</a></li>
+                <li><a href="#home" class="active">Início</a></li>
                 <li><a href="#about">Sobre</a></li>
                 <li><a href="#apps">Aplicativos</a></li>
                 <li><a href="#contact">Contato</a></li>
             </ul>
-            <div class="menu-toggle" onclick="toggleMenu()" aria-label="Alternar navegação" role="button">
+            <div class="menu-toggle" onclick="toggleMenu()" aria-label="Alternar navegação" role="button" tabindex="0">
                 <div class="hamburger"></div>
             </div>
         </nav>
     </header>
 
-    <section id="home" class="hero-section">
+    <!-- Hero Section -->
+    <section id="home" class="hero-section" data-aos="fade-in">
         <div class="hero-content">
-            <h1>Bem-vindo à Galact Apps</h1>
-            <p>Criando o futuro dos aplicativos móveis, expandindo horizontes a cada dia.</p>
+            <h1>Criamos o Futuro dos Aplicativos</h1>
+            <p>Desenvolvendo soluções inovadoras para dispositivos móveis.</p>
             <button onclick="scrollToSection('about')">Saiba Mais</button>
         </div>
     </section>
 
-    <section id="about" class="about-section">
-        <h2>Sobre Nós</h2>
+    <!-- About Section -->
+    <section id="about" class="about-section" data-aos="fade-up">
+        <h2>Sobre a GalactApps</h2>
         <div class="about-content">
-            <p>Na GalactApps, especializamo-nos em criar aplicativos móveis inovadores e amigáveis que fazem a diferença. Nossa equipe está dedicada a expandir os limites da tecnologia para fornecer as melhores soluções para nossos usuarios.</p>
+            <p>Na GalactApps, nos especializamos em criar soluções tecnológicas avançadas através do desenvolvimento de aplicativos móveis. Nossa equipe está dedicada a oferecer experiências únicas e inovadoras para nossos usuários, impulsionando a tecnologia para novas fronteiras.</p>
         </div>
     </section>
 
-    <section id="apps" class="apps-section">
-        <h2>Nossos Aplicativos</h2>
+    <!-- Apps Section -->
+    <section id="apps" class="apps-section" data-aos="fade-up">
+        <h2>Aplicativos Desenvolvidos</h2>
         <div class="carousel-container">
-            <button class="carousel-button prev" onclick="prevSlide()">&#10094;</button>
+            <button class="carousel-button prev" onclick="prevSlide()" aria-label="Slide Anterior">&#10094;</button>
             <div class="carousel-slide">
-                <div class="app-card">
-                    <img src="app1.png" alt="Logo do App 1" class="app-logo">
+                <!-- App Card 1 -->
+                <div class="app-card" data-aos="zoom-in">
+                    <img src="app1.png" alt="Logo do Minutos de Sabedoria" class="app-logo" loading="lazy">
                     <div class="app-description">
                         <h3>Minutos de Sabedoria</h3>
-                        <p>Neste aplicativo estão reunidos pequenos pensamentos de sabedoria, que nos transmitem luz, paz, amor e serenidade. É uma obra de filosofia motivacional e inspiradora, escrita para pessoas que buscam elevar-se moral, intelectual e espiritualmente.</p>
-                        <a href="https://play.google.com/store/apps/details?id=com.appgalact.minutosdesabedoria&pcampaignid=web_share" target="_blank">
+                        <p>Obtenha pequenas doses de sabedoria diariamente com frases motivacionais e inspiradoras.</p>
+                        <a href="https://play.google.com/store/apps/details?id=com.appgalact.minutosdesabedoria&pcampaignid=web_share" target="_blank" aria-label="Baixar Minutos de Sabedoria na Google Play">
                             <img src="google-play.png" alt="Ícone do Google Play" class="google-play-icon">
                         </a>
                     </div>
                 </div>
-                <div class="app-card">
-                    <img src="app2.png" alt="Logo do App 2" class="app-logo">
+                <!-- App Card 2 -->
+                <div class="app-card" data-aos="zoom-in">
+                    <img src="app2.png" alt="Logo da Galeria de Prompts (Chat IA)" class="app-logo" loading="lazy">
                     <div class="app-description">
                         <h3>Galeria de Prompts (Chat IA)</h3>
-                        <p>Explore um aplicativo de Prompts para Conversas que oferece uma ampla variedade de sugestões para criar diálogos. Este aplicativo foi projetado para inspirar conversas criativas e informativas com a assistência da inteligência artificial de Texto Generativa.</p>
-                        <a href="https://play.google.com/store/apps/details?id=com.galactapp.promptschatgpt&pcampaignid=web_share" target="_blank">
+                        <p>Explore sugestões de prompts para conversas com IA e crie diálogos criativos e informativos.</p>
+                        <a href="https://play.google.com/store/apps/details?id=com.galactapp.promptschatgpt&pcampaignid=web_share" target="_blank" aria-label="Baixar Galeria de Prompts na Google Play">
                             <img src="google-play.png" alt="Ícone do Google Play" class="google-play-icon">
                         </a>
                     </div>
                 </div>
-                <div class="app-card">
-                    <img src="app3.webp" alt="Logo do App 3" class="app-logo">
+                <!-- App Card 3 -->
+                <div class="app-card" data-aos="zoom-in">
+                    <img src="app3.webp" alt="Logo do Simulador Loto Fácil" class="app-logo" loading="lazy">
                     <div class="app-description">
                         <h3>Simulador Loto Fácil</h3>
-                        <p>O Simulador de Loteria é um aplicativo educativo e divertido que permite que você:<br>
-                            Simule jogos da Loto Fácil.<br>
-                            Analise probabilidades de cada jogo.<br>
-                            Crie e personalize seus próprios jogos de loteria (Loto Fácil).<br>
-                            Consulte resultados novos e anteriores.</p>
-                        <a href="https://play.google.com/store/apps/details?id=com.galactapp.simuladorlotofacil&pcampaignid=web_share" target="_blank">
+                        <p>Simule jogos, analise probabilidades e acompanhe resultados de loterias com facilidade.</p>
+                        <a href="https://play.google.com/store/apps/details?id=com.galactapp.simuladorlotofacil&pcampaignid=web_share" target="_blank" aria-label="Baixar Simulador Loto Fácil na Google Play">
                             <img src="google-play.png" alt="Ícone do Google Play" class="google-play-icon">
                         </a>
                     </div>
                 </div>
             </div>
-            <button class="carousel-button next" onclick="nextSlide()">&#10095;</button>
+            <button class="carousel-button next" onclick="nextSlide()" aria-label="Próximo Slide">&#10095;</button>
         </div>
         <div class="carousel-dots">
-            <span class="dot" onclick="goToSlide(0)"></span>
-            <span class="dot" onclick="goToSlide(1)"></span>
-            <span class="dot" onclick="goToSlide(2)"></span>
+            <span class="dot active" onclick="goToSlide(0)" aria-label="Slide 1"></span>
+            <span class="dot" onclick="goToSlide(1)" aria-label="Slide 2"></span>
+            <span class="dot" onclick="goToSlide(2)" aria-label="Slide 3"></span>
         </div>
     </section>
 
-    <section id="contact" class="contact-section">
-        <h2>Contate-Nos</h2>
-        <p>Tem perguntas ou deseja entrar em contato? Alcance-nos em <a class="specific-link" href="mailto:galact4app@gmail.com">galact4app@gmail.com</a>.</p>
-        <a href="https://play.google.com/store/apps/dev?id=6442447482809120290" target="_blank" class="google-play-button">Visite nossa Loja no Google Play</a>
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section" data-aos="fade-up">
+        <h2>Entre em Contato</h2>
+        <p>Tem dúvidas ou quer falar com a gente? Preencha o formulário abaixo ou envie um e-mail para <a class="specific-link" href="mailto:galact4app@gmail.com">galact4app@gmail.com</a>.</p>
+        <form class="contact-form" aria-label="Formulário de Contato">
+            <input type="text" name="name" placeholder="Seu Nome" required aria-label="Nome">
+            <input type="email" name="email" placeholder="Seu Email" required aria-label="Email">
+            <textarea name="message" placeholder="Sua Mensagem" rows="5" required aria-label="Mensagem"></textarea>
+            <button type="submit" class="google-play-button">Enviar</button>
+        </form>
+        <a href="https://play.google.com/store/apps/dev?id=6442447482809120290" target="_blank" class="google-play-button" aria-label="Visitar Loja no Google Play">Visite nossa Loja no Google Play</a>
     </section>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 GalactApps. Todos os direitos reservados.</p>
+        <div class="social-links">
+            <a href="https://facebook.com/galactapps" target="_blank" aria-label="Facebook da GalactApps"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="https://twitter.com/galactapps" target="_blank" aria-label="Twitter da GalactApps"><img src="twitter-icon.png" alt="Twitter"></a>
+            <a href="https://instagram.com/galactapps" target="_blank" aria-label="Instagram da GalactApps"><img src="instagram-icon.png" alt="Instagram"></a>
+        </div>
     </footer>
 
+    <!-- AOS Library JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
     <script src="scripts.js"></script>
 </body>
 </html>
