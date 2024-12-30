@@ -237,32 +237,30 @@ nav {
      }
 }
 
+
 /* =====================================================
-    5. About Section
+   5. About Section
 ===================================================== */
 .about-section {
      text-align: center;
-     padding: 80px 20px;
-     background-color: var(--secondary-color);
+     padding: 60px 20px;
      color: var(--text-color);
-     border-radius: 10px;
      max-width: 900px;
-     margin: 80px auto;
-     box-shadow: var(--box-shadow);
-     transition: box-shadow var(--transition-speed);
-}
-
-.about-section h2 {
-     font-size: 3em;
+     margin: 60px auto;
+ }
+ 
+ .about-section h2 {
+     font-size: 2.5em;
      margin-bottom: 20px;
      color: var(--primary-color);
-}
-
-.about-content p {
-     font-size: 1.2em;
-     line-height: 1.8;
+ }
+ 
+ .about-content p {
+     font-size: 1.5em;
+     line-height: 1.6;
      margin: 0 0 20px;
-}
+ }
+ 
 
 /* =====================================================
     6. Apps Section
